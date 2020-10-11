@@ -13,7 +13,31 @@ class LandingScreen extends StatelessWidget {
             image: AssetImage('assets/cover.jpg')
           )
         ),
-        child: Container()
+        child: Stack(
+          children: [
+            Positioned(
+              child: Container(
+                padding: EdgeInsets.only(
+                  left: 30
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 80),
+                    Text('Do not miss the', style: TextStyle(
+                      fontSize: 30
+                    )),
+                    Text('wonders of the world.', style: TextStyle(
+                      fontSize: 30
+                    )),
+                    Text('Have fun and enjoy the landscape')
+                  ],
+                ),
+              )
+            ),
+            
+          ],
+        )
       )
     );
   }
