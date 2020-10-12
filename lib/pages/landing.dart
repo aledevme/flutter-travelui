@@ -55,37 +55,41 @@ class LandingScreen extends StatelessWidget {
                   ),
                   padding: EdgeInsets.all(30),
                   width: double.infinity,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Column(
+                      child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                          Row(
                             children: [
-                              Text('Places', style: TextStyle(
-                              fontSize: 20,
+                              Column(
+                                children: [
+                                  Text('Places', style: TextStyle(
+                                  fontSize: 20,
+                                    color: Colors.white
+                                  )),
+                                  Container(color: Colors.black,height: 2, width: 60)
+                                ],
+                              ),
+                              SizedBox(width: 20),
+                              Text('Hotels', style: TextStyle(
+                                fontSize: 20,
                                 color: Colors.white
                               )),
-                              Container(color: Colors.black,height: 2, width: 60)
+                              SizedBox(width: 20),
+                                Text('Restaurants', style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.white
+                              )),
                             ],
                           ),
-                          SizedBox(width: 20),
-                          Text('Hotels', style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white
-                          )),
-                          SizedBox(width: 20),
-                            Text('Restaurants', style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white
-                          )),
+                          SizedBox(height: 20),
+                          _searchField(),
+                          
+
+                        
                         ],
-                      ),
-                      
-                    ],
-                  )
-                ),
-              ),
+                        )
+                    ),
+                  ),
                 ),
               )
             )
@@ -94,6 +98,25 @@ class LandingScreen extends StatelessWidget {
       )
     );
   }
+  
+  Widget _searchField(){
+    return TextField(
+      decoration: InputDecoration(
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.white),
+          borderRadius: BorderRadius.circular(5)
+        ),
+        filled: true,
+        fillColor: Colors.grey[200],
+        prefixIcon: Icon(Icons.search, color: Colors.grey),
+        hintText: 'Search for your dream trip...',
+        focusedBorder:OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.white, width: 2.0),
+        ),
+      ),
+    );
+  }
+
 
   
 }
