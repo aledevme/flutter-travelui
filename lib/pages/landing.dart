@@ -83,11 +83,121 @@ class LandingScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 20),
                           _searchField(),
-                          
+                          SizedBox(height: 20),
+                          Text('Favorite places', style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white
+                          )),
+                          SizedBox(height: 10),
+                          Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                              children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      border: Border.all(
+                                        color: Colors.black
+                                      ),
+                                      borderRadius: BorderRadius.circular(10)
+                                    ),
+                                    padding: EdgeInsets.all(5),
+                                    height: 70,
+                                    width: 70,
+                                    child: Image(
+                                      image: AssetImage(
+                                        'assets/city.png'
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text('City', style:TextStyle(
+                                    color:Colors.white
+                                  ))
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      border: Border.all(
+                                        color: Colors.black
+                                      ),
+                                      borderRadius: BorderRadius.circular(10)
+                                    ),
+                                    padding: EdgeInsets.all(5),
+                                    height: 70,
+                                    width: 70,
+                                    child: Image(
+                                      image: AssetImage(
+                                        'assets/tours.png'
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text('Tours', style:TextStyle(
+                                    color:Colors.white
+                                  ))
+                                ],
+                              ),
 
-                        
+                              Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      border: Border.all(
+                                        color: Colors.black
+                                      ),
+                                      borderRadius: BorderRadius.circular(10)
+                                    ),
+                                    padding: EdgeInsets.all(5),
+                                    height: 70,
+                                    width: 70,
+                                    child: Image(
+                                      image: AssetImage(
+                                        'assets/mountain-icon.png'
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text('Wonders', style:TextStyle(
+                                    color:Colors.white
+                                  ))
+                                ],
+                              ),
+
+                              Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      border: Border.all(
+                                        color: Colors.black
+                                      ),
+                                      borderRadius: BorderRadius.circular(10)
+                                    ),
+                                    padding: EdgeInsets.all(5),
+                                    height: 70,
+                                    width: 70,
+                                    child: Image(
+                                      image: AssetImage(
+                                        'assets/beach.png'
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text('Beach', style:TextStyle(
+                                    color:Colors.white
+                                  ))
+                                ],
+                              ),
+                            ],
+                          )
                         ],
-                        )
+                      )
                     ),
                   ),
                 ),
