@@ -23,10 +23,11 @@ class Home extends StatelessWidget {
                     _headerApp(),
                     _options(),
                     SizedBox(height: 20),
-                    _searchField()
+                    _searchField(),
                  ],
                ),
-             )
+             ),
+              _menuPlaces()
             ],
           ),
         ),
@@ -118,6 +119,45 @@ class Home extends StatelessWidget {
         focusedBorder:OutlineInputBorder(
           borderSide: BorderSide(color: Colors.white, width: 2.0),
         ),
+      ),
+    );
+  }
+
+  Widget _menuPlaces(){
+    return Container(
+      padding: EdgeInsets.all(20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            child: Row(
+              children: [
+                Text('Results'),
+                SizedBox(width: 5),
+                Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 2
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.green[300],
+                  ),
+                  child: Text('128'),
+                )
+              ],
+            ),
+          ),
+          Container(
+            child: Row(
+              children: [
+                Text('Views'),
+                SizedBox(width: 5),
+                Icon(Icons.dashboard, color: Colors.grey)
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
