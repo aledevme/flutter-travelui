@@ -182,11 +182,14 @@ class LandingScreen extends StatelessWidget {
                                     padding: EdgeInsets.all(5),
                                     height: 70,
                                     width: 70,
-                                    child: Image(
-                                      image: AssetImage(
-                                        'assets/beach.png'
+                                    child: GestureDetector(
+                                      onTap: ()=>Navigator.pushNamed(context, 'home'),
+                                      child: Image(
+                                        image: AssetImage(
+                                          'assets/beach.png'
+                                        ),
                                       ),
-                                    ),
+                                    )
                                   ),
                                   SizedBox(height: 5),
                                   Text('Beach', style:TextStyle(

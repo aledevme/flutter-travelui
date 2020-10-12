@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_mountain/pages/home.dart';
 import 'package:ui_mountain/pages/landing.dart';
  
 void main() => runApp(MyApp());
@@ -10,7 +11,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       routes: {
-        '/' : (BuildContext context) => LandingScreen()
+        '/' : (BuildContext context) => LandingScreen(),
+        'home' : (BuildContext context) => Home()
       },
     );
   }
